@@ -26,7 +26,6 @@ import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Toast;
 import ru.neverdark.shufflelist.R;
 
 public class MainActivity extends Activity {
@@ -35,7 +34,7 @@ public class MainActivity extends Activity {
         public void onClick(View v) {
             String text = mEditText.getText().toString();
             if (text.length() > 0) {
-                mAdapter.add(new Item(text));
+                mAdapter.insert(new Item(text), 0);
                 mEditText.setText("");
             }
         }
