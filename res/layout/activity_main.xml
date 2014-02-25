@@ -46,6 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_toLeftOf="@+id/addButton"
+        android:hint="@string/enterText"
         android:ems="10" >
     </EditText>
 

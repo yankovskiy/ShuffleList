@@ -25,5 +25,7 @@
     
     <string name="author_email">artemyankovskiy@gmail.com</string>
     <string name="chooseEmailApp">Выберите приложение для отправки email</string>
+    
+    <string name="enterText">Введите текст</string>
 
 </resources>
