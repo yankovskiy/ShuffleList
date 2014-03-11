@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
     private class AddButtonClickListener implements OnClickListener {
         @Override
         public void onClick(View v) {
-            String text = mEditText.getText().toString();
+            String text = mEditText.getText().toString().trim();
             if (text.length() > 0) {
                 mAdapter.insert(new Item(text), 0);
                 mEditText.setText("");
@@ -55,6 +55,7 @@ public class MainActivity extends Activity {
         mEditText = (EditText) findViewById(R.id.text);
 
         mButton.setOnClickListener(new AddButtonClickListener());
+        mButton.setOnTouchListener(new ImageOnTouchListener());
         mAdapter = new ListAdapter(this);
         mListView.setAdapter(mAdapter);
     }
